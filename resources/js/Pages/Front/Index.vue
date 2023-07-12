@@ -12,7 +12,7 @@ onMounted(() => {
     // Menunggu 500ms sebelum menjalankan kode berikutnya
     setTimeout(() => {
         // Menggunakan metode goToAndPlay dari animasi Lottie dengan parameter 150
-        // untuk memulai animasi pada frame 150, dengan loop (true) 
+        // untuk memulai animasi pada frame 150, dengan loop (true)
         console.log(anim.value.goToAndPlay(150, true));
         // Memanggil objek anim.value untuk menjalankan animasi Lottie
         anim.value.play();
@@ -52,10 +52,10 @@ const props = defineProps({
 
 <template>
     <Head title="Welcome" />
-    <nav class="bg-white">
+    <nav class="navbar" style="background-color: thistle;">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
-                <img src="img/logo_Web.png" class="h-8 mr-3" alt=" Logo" />
+                <img src="img/logo.png" class="h-8 mr-3" alt=" Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Dosen AI</span>
             </a>
             <div class="flex md:order-2">
@@ -81,7 +81,8 @@ const props = defineProps({
             </div>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul
-                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
+
+                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700" style="background-color: thistle;">
                     <li>
                         <a href="#"
                             class="block py-2 pl-3 pr-4 text-dark bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-dark md:dark:text-blue-500"
@@ -167,7 +168,7 @@ const props = defineProps({
                             <i class="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
                         </a>
                     </div>
-                </div>  
+                </div>
             </div>
             <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
                 <div v-for="item in skill" :key="item.id">
@@ -190,7 +191,7 @@ const props = defineProps({
                         <Logo />
                     </div>
                     <div className="text-sm text-gray-600">
-                        <img src="img/logo_Web.png" class="h-8 mr-3" alt=" Logo" />
+                        <img src="img/logo.png" class="h-8 mr-3" alt=" Logo" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Dosen AI</span>
                     </div>
                 </div>
