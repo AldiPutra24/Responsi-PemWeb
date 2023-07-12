@@ -8,7 +8,7 @@
 </p>
 
 ## Link Deploy
-https://diligent-raw-fug.domcloud.io/
+https://aldiputra.domcloud.io/
 
 ## About Laravel
 
