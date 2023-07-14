@@ -52,11 +52,11 @@ const props = defineProps({
 
 <template>
     <Head title="Welcome" />
-    <nav class="navbar" style="background-color: thistle;">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="/" class="flex items-center">
+    <nav class="navbar navbar-expand-l sticky-lg-top">
+        <div class="isinav container-fluid max-w-screen-xl flex flex-wrap items-center justify-content-between">
+            <a href="/" class="flex navbar-brand">
                 <img src="img/logo.png" class="h-8 mr-3" alt=" Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Dosen AI</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Responsi</span>
             </a>
             <div class="flex md:order-2">
                 <div v-if="canLogin">
@@ -82,7 +82,7 @@ const props = defineProps({
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul
 
-                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700" style="background-color: thistle;">
+                class="ulnav font-medium flex flex-col p-2 md:p-0 mt-2 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
                     <li>
                         <a href="#"
                             class="block py-2 pl-3 pr-4 text-dark bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-dark md:dark:text-blue-500"
@@ -108,8 +108,8 @@ const props = defineProps({
             </div>
         </div>
     </nav>
-    <section class="bg-white dark:bg-gray-900">
-        <div class="py-1 px-4 mx-auto max-w-screen-xl  lg:py-16 grid lg:grid-cols-2 gap-12 lg:gap-16">
+    <section class="section">
+        <div class="isi max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div class="flex flex-col justify-center">
                 <h1
                     class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
@@ -130,7 +130,7 @@ const props = defineProps({
                         Learn more </a>
                 </div>
             </div>
-            <div>
+            <div >
                 <LottieAnimation :animation-data="WatermelonJSON" :auto-play="true" :height="100" :loop="true" :speed="1"
                     ref="anim" />
             </div>
@@ -138,35 +138,25 @@ const props = defineProps({
     </section>
     <section cclass="bg-grey-50" id="about">
         <div class="mx-auto max-w-screen-xl container flex flex-col items-center py-16 md:py-20 lg:flex-row">
-            <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+            <div class="w-full sm:w-3/4 lg:w-3/5 lg:text-left">
                 <h2 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"> Who am I?
                 </h2>
                 <h4 class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"> {{ about.judul }}</h4>
                 <p class="pt-6 font-body leading-relaxed text-grey-20">{{ about.konten }}</p>
-                <div class="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
+                <h2 class="fw-bold text-decoration-underline mt-3">Connent With Me</h2>
+                <div class="flex flex-col justify-center sm:flex-row lg:justify-start">
                     <div class="flex items-center justify-center sm:justify-start">
-                        <a href="https://www.instagram.com/mujiyantosvc/"
-                            class="font-body text-lg font-semibold uppercase text-grey-20"> Connect with me </a>
+                        <a href="https://www.instagram.com/kacangtakberkulit/" target="_blank" class="font-body text-lg font-semibold uppercase text-grey-20 flex" >
+                            <img src="../../../../public/img/ig.png" alt="" width="35px"></a>
+                        <a href="https://github.com/AldiPutra24" target="_blank" class="font-body text-lg font-semibold uppercase text-grey-20 flex">
+                            <img src="../../../../public/img/github.png" alt="" width="55px">
+                        </a>
+                        <a href="https://www.linkedin.com/in/aldi-putra-m-u-52231b222/" target="_blank" class="font-body text-lg font-semibold uppercase text-grey-20 flex">
+                            <img src="../../../../public/img/linkedin.png" alt="" width="35px">
+                        </a>
                         <div class="hidden sm:block">
                             <i class="bx bx-chevron-right text-2xl text-primary"></i>
                         </div>
-                    </div>
-                    <div class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                        <a href="/">
-                            <i class="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
-                        </a>
-                        <a href="/" class="pl-4">
-                            <i class="bx bxl-twitter text-2xl text-primary hover:text-yellow"></i>
-                        </a>
-                        <a href="/" class="pl-4">
-                            <i class="bx bxl-dribbble text-2xl text-primary hover:text-yellow"></i>
-                        </a>
-                        <a href="/" class="pl-4">
-                            <i class="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
-                        </a>
-                        <a href="/" class="pl-4">
-                            <i class="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -184,15 +174,15 @@ const props = defineProps({
         </div>
     </section>
     <footer>
-        <div className="mx-auto max-w-screen-xl  px-4 sm:px-6">
-            <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200">
+        <div className="footer">
+            <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200 ms-5 me-5">
                 <div className="sm:col-span-12 lg:col-span-3">
                     <div className="mb-2">
                         <Logo />
                     </div>
                     <div className="text-sm text-gray-600">
                         <img src="img/logo.png" class="h-8 mr-3" alt=" Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Dosen AI</span>
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Responsi</span>
                     </div>
                 </div>
                 <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
@@ -306,7 +296,9 @@ const props = defineProps({
                     </form>
                 </div>
             </div>
-            <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
+
+            <div class="copyright">
+                <div class="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
                 <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
                     <li>
                         <a href="#0"
@@ -339,8 +331,36 @@ const props = defineProps({
                         </a>
                     </li>
                 </ul>
-                <div className="text-sm text-gray-600 mr-4">&copy; Amikom. All rights reserved.</div>
+                <div className="text-sm text-gray-600 mr-4 ms-5">&copy; Amikom. All rights reserved.</div>
             </div>
+            </div>
+
         </div>
 </footer></template>
-<style></style>
+<style>
+    .section{
+        background-color: #C4AFD8;
+    }
+
+    .navbar {
+        background-image: linear-gradient(#786986, #C4AFD8);
+        backdrop-filter: blur(20px);
+    }
+
+    .ulnav{
+        background-color: transparent;
+    }
+
+    .isi{
+        margin-left: 40px;
+    }
+
+    #about{
+        background-image: linear-gradient(#C4AFD8, #ffffff);
+    }
+
+    .copyright{
+        background-image: linear-gradient(#ffffff, #C4AFD8);
+    }
+
+</style>
