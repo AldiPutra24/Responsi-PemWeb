@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'aldi-putra'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_45B88181A21F47CFADA4059670203B06 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0491DC4EEFB4E55AE5920CB669173E1 }}
           package: .
